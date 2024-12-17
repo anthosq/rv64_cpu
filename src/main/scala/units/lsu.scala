@@ -1,9 +1,9 @@
-package unit.lsu
+package npc.units.lsu
 
 import chisel3._
 import chisel3.util._
 
 
-class lsu {
+class  LSU extends Module {
   
 }

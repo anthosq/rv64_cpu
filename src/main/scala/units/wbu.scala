@@ -1,8 +1,8 @@
-package unit.wbu
+package npc.units.wbu
 
 import chisel3._
 import chisel3.util._
 
-class wbu {
+class WBU extends Module {
   
 }

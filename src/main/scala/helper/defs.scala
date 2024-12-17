@@ -1,6 +1,7 @@
 package npc.helper.defs
 
 import chisel3._
+import chisel3.util._
 
 object Base {
   val DataWidth = 32
@@ -42,6 +43,9 @@ object Base {
 
   val RDHi = 11
   val RDLo = 7
+
+  val StartAddr = "h80000000".U(AddrWidth.W)
+
 }
 
 object PipelineDefs {

@@ -2,7 +2,6 @@ package npc.units.iFetch
 
 import chisel3._
 import chisel3.util._
-
 import npc.helper._
 import npc.helper.defs.Base._
 import npc.helper.defs.PipelineDefs.IF2ID_Width
