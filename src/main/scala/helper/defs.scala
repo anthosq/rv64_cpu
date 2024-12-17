@@ -2,7 +2,7 @@ package npc.helper.defs
 
 import chisel3._
 
-object Base{
+object Base {
   val DataWidth = 32
   val WordWidth = 32
   val HalfWordWidth = 16
@@ -42,4 +42,20 @@ object Base{
 
   val RDHi = 11
   val RDLo = 7
+}
+
+object PipelineDefs {
+  val IF2ID_Width = Base.InstWidth + Base.AddrWidth
+  
+  // EX have 2 SRC, LS have 1 SRC
+  val ID2EX_Width = Base.InstWidth + 2 * Base.AddrWidth + Base.DecodeWidth + Base.RegIDWidth + (3 * Base.DataWidth)
+
+  // EXRet and LSsrc
+  val EX2LS_Width = Base.InstSize + 2 * Base.AddrWidth + Base.DecodeWidth + Base.RegIDWidth + (2 * Base.DataWidth)
+
+  val LS2WB_Width = Base.InstSize + 2 * Base.AddrWidth + Base.DecodeWidth + Base.RegIDWidth + (2 * Base.DataWidth)
+}
+
+object CSR_LUT {
+
 }
